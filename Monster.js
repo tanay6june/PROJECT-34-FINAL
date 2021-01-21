@@ -8,7 +8,7 @@ class Monster {
   this.y=y;
   this.r=r
   this.image = loadImage("Monster-01.png");
-  this.image.scale=0.9
+  //this.image.scale=0.9
   this.body=Bodies.circle(this.x, this.y, (this.r)/2, options)
   World.add(world, this.body);
   
@@ -18,8 +18,8 @@ class Monster {
     push()
     translate(this.body.position.x, this.body.position.y);
     rotate(angle);
-    ellipse(0,0,this.r,this.r);
-    image(this.image ,-1000,0);
+    ellipse(0,0,0,0);
+    image(this.image ,-100,-100,210,150);
      pop()
   }
   

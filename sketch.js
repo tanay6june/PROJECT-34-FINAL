@@ -8,10 +8,10 @@ var box1,box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, bo
 var hero,fly;
 var ground;
 var monster,rope;
-
+var backgroundImage;
 
 function preload(){
-  hero=loadImage("Superhero-01.png")
+    backgroundImage=loadImage("GamingBackground.png")
 }
 
 function setup(){
@@ -51,7 +51,7 @@ function setup(){
 }
 
 function draw(){
-    background(180);
+    background(180)
     Engine.update(engine);
 
     box1.display();
