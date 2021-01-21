@@ -8,10 +8,11 @@ var box1,box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, bo
 var hero,fly;
 var ground;
 var monster,rope;
-var backgroundImage;
+var backgroundImage,platform;
+var bg = "GamingBackground.png";
 
 function preload(){
-    backgroundImage=loadImage("GamingBackground.png")
+    getBackgroundImage();
 }
 
 function setup(){
@@ -51,7 +52,9 @@ function setup(){
 }
 
 function draw(){
-    background(180)
+    if(backgroundImage)
+        background(backgroundImage);
+
     Engine.update(engine);
 
     box1.display();
@@ -87,5 +90,8 @@ function mouseDragged(){
     Matter.Body.setPosition(hero.body, {x: mouseX, y: mouseY});
 }
 
-
+async function getBackgroundImage(){
+    backgroundImage = loadImage(bg);
+    console.log(backgroundImage);
+}
 
